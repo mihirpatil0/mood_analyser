@@ -11,6 +11,21 @@ package com.bridgelab.moodanalyzer;
 
 public class MoodAnalyser
 {
+    public String userMessage;
+
+    //non parameterized constructor
+    public MoodAnalyser()
+    {
+        super();
+    }
+
+    //parameterized constructor
+    public MoodAnalyser(String userMessage)
+    {
+        super();
+        this.userMessage = userMessage;
+    }
+
     /**
      * Name : analyseMood
      *
