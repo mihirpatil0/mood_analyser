@@ -11,5 +11,28 @@ package com.bridgelab.moodanalyzer;
 
 public class MoodAnalyser
 {
-
+    /**
+     * Name : analyseMood
+     *
+     * Description : Analyzing mood happy or sad.
+     *
+     * @param userMessage //user given message.
+     * @return //happy or sad.
+     *
+     * Algorithm : If user given message has happy or sad written in it.
+     * then returning the respective matching string i.e either happy or sad.
+     *
+     * Modification : First commit 13-July-2021
+     */
+    public String analyseMood(String userMessage)
+    {
+        if(userMessage.contains("sad"))
+        {
+            return "sad";
+        }
+        else
+        {
+            return "happy";
+        }
+    }
 }

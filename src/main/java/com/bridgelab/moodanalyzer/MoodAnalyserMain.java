@@ -13,6 +13,8 @@ public class MoodAnalyserMain
 {
     public static void main(String[] args)
     {
-
+        MoodAnalyser moodAnalyserObj = new MoodAnalyser();
+        String userMessage = "Today i am sad";
+        System.out.println(moodAnalyserObj.analyseMood(userMessage));
     }
 }
