@@ -26,6 +26,11 @@ public class MoodAnalyser
         this.userMessage = userMessage;
     }
 
+    public String analyseMood()
+    {
+        return analyseMood(userMessage);
+    }
+
     /**
      * Name : analyseMood
      *
