@@ -1,5 +1,10 @@
 package com.bridgelab.moodanalysertest;
 
+import com.bridgelab.moodanalyzer.MoodAnalyser;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**************************************************************
  * @author mihir
  *
@@ -9,5 +14,10 @@ package com.bridgelab.moodanalysertest;
 
 public class MoodAnalyserTest
 {
-
+    @Test
+    public void givenUserMessage_whenSad_shouldReturnSad()
+    {
+        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        assertEquals("sad",moodAnalyser.analyseMood("I am in sad mood"));
+    }
 }
