@@ -19,5 +19,5 @@ public class MoodAnalyserTest
     {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         assertEquals("sad",moodAnalyser.analyseMood("I am in sad mood"));
-    }
+    }//end for first test case.
 }
