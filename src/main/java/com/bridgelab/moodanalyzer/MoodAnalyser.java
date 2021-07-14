@@ -26,6 +26,15 @@ public class MoodAnalyser
         this.userMessage = userMessage;
     }
 
+    /**
+     * Name : analyseMood
+     *
+     * Description : This method calls parameterized analyseMood() method.
+     *
+     * @return
+     *
+     * Modification : First commit 13-July-2021
+     */
     public String analyseMood()
     {
         return analyseMood(userMessage);
