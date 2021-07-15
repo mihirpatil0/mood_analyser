@@ -1,5 +1,7 @@
 package com.bridgelab.moodanalyzer;
 
+import com.bridgelab.moodanalyzer.MoodAnalysisException.ExceptionType;
+
 /****************************************************************************************
  * @author mihir
  *
@@ -57,7 +59,11 @@ public class MoodAnalyser
     {
         try
         {
-            if(userMessage.contains("sad"))
+            if(userMessage.length() == 0)
+            {
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.GIVEN_EMPTY,"Message can not be empty.");
+            }
+            if (userMessage.contains("sad"))
             {
                 return "sad";
             }
@@ -68,7 +74,7 @@ public class MoodAnalyser
         }
         catch (NullPointerException e)
         {
-            throw new MoodAnalysisException("Message can not be null.");
+            throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.GIVEN_EMPTY, "Message can not be null.");
         }
     }
 }

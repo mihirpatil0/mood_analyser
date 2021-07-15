@@ -63,4 +63,18 @@ public class MoodAnalyserTest
             assertEquals("Message can not be null.",e.getMessage());
         }
     }
+
+    @Test
+    public void givenMessageInConstructor_whenEmptyString_shouldReturnHappy()
+    {
+        try
+        {
+            MoodAnalyser moodAnalyse = new MoodAnalyser("");
+            assertEquals("happy",moodAnalyse.analyseMood());
+        }
+        catch (MoodAnalysisException e)
+        {
+            assertEquals(MoodAnalysisException.ExceptionType.GIVEN_EMPTY, e.type);
+        }
+    }
 }
