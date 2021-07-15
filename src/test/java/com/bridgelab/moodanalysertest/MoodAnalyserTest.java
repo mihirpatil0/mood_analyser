@@ -1,6 +1,7 @@
 package com.bridgelab.moodanalysertest;
 
 import com.bridgelab.moodanalyzer.MoodAnalyser;
+import com.bridgelab.moodanalyzer.MoodAnalysisException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,5 +48,19 @@ public class MoodAnalyserTest
     {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         assertEquals("happy",moodAnalyser.analyseMood());
+    }
+
+    @Test
+    public void givenMessageInConstructor_whenNull_shouldReturnHappy()
+    {
+        try
+        {
+            MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+            assertEquals("happy",moodAnalyser.analyseMood());
+        }
+        catch (MoodAnalysisException e)
+        {
+            assertEquals("Message can not be null.",e.getMessage());
+        }
     }
 }

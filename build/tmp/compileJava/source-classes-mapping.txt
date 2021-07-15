@@ -1,4 +1,6 @@
 com/bridgelab/moodanalyzer/MoodAnalyserMain.java
  com.bridgelab.moodanalyzer.MoodAnalyserMain
+com/bridgelab/moodanalyzer/MoodAnalysisException.java
+ com.bridgelab.moodanalyzer.MoodAnalysisException
 com/bridgelab/moodanalyzer/MoodAnalyser.java
  com.bridgelab.moodanalyzer.MoodAnalyser

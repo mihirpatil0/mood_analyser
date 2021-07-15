@@ -53,7 +53,7 @@ public class MoodAnalyser
      *
      * Modification : First commit 13-July-2021
      */
-    public String analyseMood(String userMessage)
+    public String analyseMood(String userMessage) throws MoodAnalysisException
     {
         try
         {
@@ -68,7 +68,7 @@ public class MoodAnalyser
         }
         catch (NullPointerException e)
         {
-            return "happy";
+            throw new MoodAnalysisException("Message can not be null.");
         }
     }
 }
